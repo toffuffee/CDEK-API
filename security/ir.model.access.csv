@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cdek,cdek,model_cdek,base.group_user,1,1,1,1
+access_cdeksetting,cdeksetting,model_cdeksetting,base.group_user,1,1,1,1
+access_callcourier,callcourier,model_callcourier,base.group_user,1,1,1,1

@@ -1,0 +1,24 @@
+<odoo>
+    <template id="main_page" name="Developer`s Website">
+        <t t-call="website.layout">
+            <div class="oe_structure">
+                <div class="container">
+                    <center><h3 class="title">Delivery details</h3></center>
+                    <div class="cdeks-container">
+                        <t t-foreach="cdeks" t-as="cdek">
+                            <div class="cdek">
+                                <div class="name-block">Name: <t t-esc="cdek.name"/></div>
+                                <div class="lastname-block">Lastname: <t t-esc="cdek.lastname"/></div>
+                                <div class="comment-block">number: <t t-esc="cdek.number"/></div>
+                                <div class="city-block">City: <t t-esc="cdek.city"/></div>
+                                <div class="address-block">Address: <t t-esc="cdek.address"/></div>
+                                <div class="house-block">House: <t t-esc="cdek.house"/></div>
+                            </div>
+                        </t>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="/academy/static/js/main.js"></script>
+        </t>
+    </template>
+</odoo>

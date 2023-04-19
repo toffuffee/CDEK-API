@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="sale_order_inherited_view_test" model="ir.ui.view">
+            <field name="name">sale.order.view.form.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="uuid_request"/>
+                    <field name="uuid_request_courier"/>
+                    <field name="cdek_sended"/>
+                    <field name="courier_sended"/>
+                    <field name="calculate_result"></field>
+                    <!-- attrs="{'invisible':[('delivery_type_get','=','atPoint')]}" -->
+                </xpath>
+                <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <!-- <button name="calc" attrs="{'invisible':[('cdek_sended','=',True),('courier_sended','=',True)]}" class="oe_highlight" type="object" string="Калькулятор"/> -->
+                    <button name="sendCdek" attrs="{'invisible':[('cdek_sended','=',True)]}" class="oe_highlight" type="object" string="Отправить в СДЕК"/>
+                    <button name="deleteCdek" attrs="{'invisible':[('cdek_sended','=',False)]}" class="oe_highlight" type="object" string="Удалить заказ"/>
+                    <button name="%(cdek.action_sendtocdek_courier)d" attrs="{'invisible':[('courier_sended','=',True)]}" class="oe_highlight" type="action" string="Вызвать курьера"/>
+                    <button name="deleteCourier" attrs="{'invisible':[('courier_sended','=',False)]}" class="oe_highlight" type="object" string="Отменить вызов курьера"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

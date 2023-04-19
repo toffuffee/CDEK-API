@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <data>
+        <record model="ir.ui.view" id="view_sendtocdek_form">
+            <field name="name">callcourier.form</field>
+            <field name="model">callcourier</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="coureir" string="Вызов Курьера">
+                                <field name="intake_date" />
+                                <field name="intake_time_from" />
+                                <field name="intake_time_to" />
+                                <field name="comment" />
+                                <field name="need_call" />
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="sendCourier" string="Отправить" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+          </record>
+
+          <record id="action_sendtocdek_courier" model="ir.actions.act_window">
+            <field name="name">Вызвать курьера</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">callcourier</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_sendtocdek_form"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+    

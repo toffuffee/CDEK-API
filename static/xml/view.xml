@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+    <data>
+      <record model="ir.ui.view" id="view_cdek_form">
+        <field name="name">cdek.form</field>
+        <field name="model">cdek</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="coureir" string="coureir">
+                            <field name="name" />
+                            <field name="lastname"/>
+                            <field name="number"/>
+                            <field name="delivery"/>
+                            <field name="city"/>
+                            <field name="address"/>
+                            <field name="house"/>
+                            <field name="postal_code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+      </record>
+
+        <record id="view_cdek_tree" model="ir.ui.view">
+            <field name="name">cdek.tree</field>
+            <field name="model">cdek</field>
+            <field name="arch" type="xml">
+                <tree class="customize">
+                    <field name="name" />
+                    <field name="lastname"/>
+                    <field name="number"/>
+                    <field name="delivery"/>
+                    <field name="city"/>
+                    <field name="address"/>
+                    <field name="house"/>
+                    <field name="postal_code"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record model="ir.ui.view" id="view_cdeksetting_form">
+            <field name="name">cdeksetting.form</field>
+            <field name="model">cdeksetting</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="options-cdek" string="Настройки СДЭК">
+                            <field name="token"></field>
+                            <field name="user_login"></field>
+                            <field name="user_password"></field>
+                            <field name="city_admin"></field>
+                            <field name="address_admin"></field>
+                            <field name="type_delivery"></field>
+                            <field name="postal_code"></field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+          </record>
+    
+            <record id="view_cdeksetting_tree" model="ir.ui.view">
+                <field name="name">cdeksetting.tree</field>
+                <field name="model">cdeksetting</field>
+                <field name="arch" type="xml">
+                    <tree class="customize">
+                        <field name="token"></field>
+                        <field name="user_login"></field>
+                        <field name="user_password"></field>
+                        <field name="city_admin"></field>
+                        <field name="address_admin"></field>
+                        <field name="type_delivery"></field>
+                        <field name="postal_code"></field>
+                    </tree>
+                </field>
+            </record>
+       
+    </data>

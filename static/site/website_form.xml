@@ -1,0 +1,98 @@
+<odoo>
+
+    <record id="menu_patient_form12" model="website.menu">
+        <field name="name">Add delivery</field>
+        <field name="url">/add_cdek</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence">55</field>
+    </record>
+
+    <template id="create_cdek" name="Create Developer">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <div class="container">
+                        <form role="form" class="cdek-form" action="/create/cdek" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            <div class="form-group name">
+                                <label for="name" class="control-label">Имя</label>
+                                <input type="text" name="name" id="name"
+                                class="form-control" required="required"/>
+                            </div>
+                            <div class="form-group lastname">
+                                <label for="lastname" class="control-label">Фамилия</label>
+                                <input type="text" name="lastname" id="lastname"
+                                class="form-control" required="required"/>
+                            </div>
+                            <div class="form-group number">
+                                <label for="number" class="control-label">Телефон</label>
+                                <input type="number" name="number" id="number"
+                                class="form-control" required="required"/>
+                            </div>
+                            <div class="form-group city">
+                                <label for="city" class="control-label">Город</label>
+                                <input type="text" name="city" id="city"
+                                class="form-control" required="required"/>
+                            </div>
+                            <div class="form-group address">
+                                <label for="address" class="control-label">Адрес</label>
+                                <input type="text" name="address" id="address"
+                                class="form-control address-input"/>
+                            </div>
+                            <div class="form-group house">
+                                <label for="house" class="control-label">Дом/квартира</label>
+                                <input type="text" name="house" id="house"
+                                class="form-control house-input"/>
+                            </div>
+                            <div class="form-group postal-code">
+                                <label for="postal_code" class="control-label">Почтовый индекс</label>
+                                <input type="text" placeholder="000000" name="postal_code" id="postal_code"
+                                class="form-control postal-input"/>
+                            </div>
+                            <div class="form-group delivery">
+                                <label for="delivery" class="control-label">Вид доставки</label>
+                                <select name="delivery" id="delivery" required="required">
+                                    <option value="courier">Курьер</option>
+                                    <option value="atPoint">В пункт выдачи</option>
+                                </select>
+                            </div>
+                            <div class="clearfix oe_login_buttons">
+                                <button type="submit" class="btn btn-primary pull-left">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="/cdek/static/js/select_delivery.js"/>
+        </t>
+    </template>
+
+    <record id="developer_thanks" model="website.page">
+        <field name="name">Thanks!</field>
+        <field name="type">qweb</field>
+        <field name="url">/developer-thank-you</field>
+        <field name="website_published">True</field>
+        <field name="key">cdek.devilery_thanks</field>
+        <field name="arch" type="xml">
+            <t name="Thanks" t-name="cdek.devilery_thanks">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="container">
+                            <h1>Thanks!</h1>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="alert alert-success" role="status">
+                                        Your message has been sent successfully.
+                                    </div>
+                                    <p>
+                                        We will get back to you shortly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+</odoo>

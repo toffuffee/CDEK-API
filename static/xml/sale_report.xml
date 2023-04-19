@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <template inherit_id="sale.report_saleorder_document" id="sale_report_saleorder_extend">
+            <xpath expr="//table" position="after">
+                <h1>Вид доставки:</h1>
+                <div t-field="doc.calculate_result"></div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <record id="sale_order_inherit_inherited_view_test" model="ir.ui.view">
+            <field name="name">product.template.view.form.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='volume']" position="replace">
+                    <field name="length_prod" id="volume"/>
+                </xpath>
+                <xpath expr="//field[@name='weight']" position="replace">
+                    <field name="weight_prod" id="weight"/>
+                </xpath>
+                <xpath expr="//field[@name='responsible_id']" position="after">
+                    <field name="height_prod"/>
+                    <field name="width_prod"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

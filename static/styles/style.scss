@@ -1,0 +1,66 @@
+.o_list_view .o_list_table thead > tr > th:not(.o_list_record_selector){
+    white-space: pre-line;
+}
+
+.o_list_view .o_list_table tbody > tr > td:not(.o_list_record_selector):not(.o_handle_cell):not(.o_list_button){
+    white-space: pre-line;
+}
+
+.custom-control{
+    position: relative;
+    display: block;
+    min-height: 1.625rem;
+    padding-bottom: 18px;
+    padding-left: 16px;
+}
+
+.customize table thead > tr > th:nth-child(4){
+    width: 150px;
+    text-align: center;
+}
+
+.customize table tbody > tr > td:nth-child(4){
+    text-align: center;
+}
+
+.customize table thead > tr > th:nth-child(3){
+    text-align: center;
+}
+
+.customize table tbody > tr > td:nth-child(3){
+    text-align: center;
+}
+
+.main-item{
+    position: relative;
+}
+
+.sub-menu 
+{ 
+   font-size: 14px;
+   display: none; 
+   position: absolute;
+   left: 140px;
+   background-color: white;
+   color: black;
+   padding: 16px 16px 16px 16px;
+} 
+
+
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.hide{
+    display: none;
+}
+
+.hidden-table{
+    display: none;
+}

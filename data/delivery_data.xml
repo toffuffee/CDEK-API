@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="0"> 
+        <record id="product_delivery_id_one" model="product.product">
+            <field name="name">Комп</field>
+            <field name="sale_ok">true</field>
+            <field name="purchase_ok">true</field>
+            <field name="detailed_type">consu</field>
+            <field name="invoice_policy">order</field>
+            <field name="categ_id">1</field>
+        </record>
+
+        <record id="product_delivery_id_two" model="product.product">
+            <field name="name">Комп2</field>
+            <field name="sale_ok">true</field>
+            <field name="purchase_ok">true</field>
+            <field name="detailed_type">consu</field>
+            <field name="invoice_policy">order</field>
+            <field name="categ_id">2</field>
+        </record>
+
+        <record id="product_delivery_id_three" model="product.product">
+            <field name="name">Комп3</field>
+            <field name="sale_ok">true</field>
+            <field name="purchase_ok">true</field>
+            <field name="detailed_type">consu</field>
+            <field name="invoice_policy">order</field>
+            <field name="categ_id">1</field>
+        </record>
+
+        <record id="product_delivery_id_four" model="product.product">
+            <field name="name">Комп4</field>
+            <field name="sale_ok">true</field>
+            <field name="purchase_ok">true</field>
+            <field name="detailed_type">consu</field>
+            <field name="invoice_policy">order</field>
+            <field name="categ_id">3</field>
+        </record>
+
+        <record id="product_delivery_id_five" model="product.product">
+            <field name="name">Комп5</field>
+            <field name="sale_ok">true</field>
+            <field name="purchase_ok">true</field>
+            <field name="detailed_type">consu</field>
+            <field name="invoice_policy">order</field>
+            <field name="categ_id">3</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="action_window_cdek">
+      <field name="name">CDEK</field>
+      <field name="res_model">cdek</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_window_cdeksetting">
+      <field name="name">CDEK Settings</field>
+      <field name="res_model">cdeksetting</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+
+    <menuitem name="Module" id="cdek.menu_root"/>
+
+    <menuitem name="CDEK" id="cdek.menu_1" parent="cdek.menu_root" action="action_window_cdek" sequence="30"/>
+    <menuitem name="Настройки" id="cdek.menu_2" parent="cdek.menu_root" action="action_window_cdeksetting" sequence="30"/>
+  </data>
+</odoo>
